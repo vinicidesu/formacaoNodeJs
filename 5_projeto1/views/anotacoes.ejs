@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Guia Perguntas</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <h1>Guia Perguntas</h1>
+    <hr>
+    <h3>Lista de Perguntas</h3>
+
+    <!--EXIBIR VALOR DA VARIAVEL-->
+    <p>Nome: <%= nome %></p>
+    <p>Linguagem favorita: <%= lang %></p>
+    <p>Empresa: <%= empresa %></p>
+    <p>Inscritos no canal: <%= inscritos %></p>
+
+    <!--CONDICIONAL NO EJS-->
+    <% if(msg == true){ %>
+        <h3>Isso é uma mensagem de erro!</h3>
+    <%} else{ %>
+        <h3>Nenhum erro!</h3>
+        <%}%>
+
+    <!--REPETIÇÃO NO EJS-->
+    <% produtos.forEach(function(produto){ %>
+        <hr>
+        <h3><%= produto.nome %></h3>
+        <h4><%= produto.preco %></h4>
+    <% }) %>
+
+    <img src="/img/guia.jpg"
+
+
+</body>
+</html>
